@@ -6,9 +6,16 @@
   "title": "Recipe Block",
   "category": "widgets",
   "icon": "smiley",
-  "description": "A block helps you to create a recipe.",
+  "description": "A block to create a recipe.",
   "supports": {
     "html": false
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2"
+    }
   },
   "textdomain": "blocks_plugin",
   "editorScript": "file:./index.js",

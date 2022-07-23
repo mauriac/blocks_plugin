@@ -10,6 +10,13 @@
 	"supports": {
 		"html": false
 	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		}
+	},
 	"textdomain": "blocks_plugin",
 	"editorScript": "file:./index.js",
 	"editorStyle": "file:./index.css",

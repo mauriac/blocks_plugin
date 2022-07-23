@@ -52,8 +52,26 @@ __webpack_require__.r(__webpack_exports__);
  * @return {WPElement} Element to render.
  */
 
-function Edit() {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Blocks Plugin – hello from the editor!', 'blocks_plugin'));
+function Edit(props) {
+  const {
+    attributes: {
+      title
+    },
+    setAttributes
+  } = props;
+
+  const onChangeTitle = value => {
+    setAttributes({
+      title: value
+    });
+  };
+
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", (0,_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps)(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText, {
+    tagName: "h2",
+    placeholder: (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Recipe title', 'blocks-plugin'),
+    value: title,
+    onChange: onChangeTitle
+  }));
 }
 
 /***/ }),
@@ -155,8 +173,16 @@ __webpack_require__.r(__webpack_exports__);
  * @return {WPElement} Element to render.
  */
 
-function save() {
-  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("p", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save(), (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_1__.__)('Blocks Plugin – hello from the saved content!', 'blocks_plugin'));
+function save(props) {
+  const {
+    attributes: {
+      title
+    }
+  } = props;
+  return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.useBlockProps.save(), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_2__.RichText.Content, {
+    tagName: "h2",
+    value: title
+  }));
 }
 
 /***/ }),
@@ -231,7 +257,7 @@ module.exports = window["wp"]["i18n"];
   \*************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"maur-blocks/recipe","version":"0.1.0","title":"Recipe Block","category":"widgets","icon":"smiley","description":"A block helps you to create a recipe.","supports":{"html":false},"textdomain":"blocks_plugin","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"maur-blocks/recipe","version":"0.1.0","title":"Recipe Block","category":"widgets","icon":"smiley","description":"A block to create a recipe.","supports":{"html":false},"attributes":{"title":{"type":"string","source":"html","selector":"h2"}},"textdomain":"blocks_plugin","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 
