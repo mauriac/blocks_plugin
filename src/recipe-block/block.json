@@ -1,0 +1,17 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "maur-blocks/recipe",
+	"version": "0.1.0",
+	"title": "Recipe Block",
+	"category": "widgets",
+	"icon": "smiley",
+	"description": "A block to create a recipe.",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "blocks_plugin",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css"
+}
