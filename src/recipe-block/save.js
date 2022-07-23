@@ -24,15 +24,35 @@ import { useBlockProps, RichText } from '@wordpress/block-editor';
  */
 export default function save( props ) {
 	const {
-		attributes: { title },
+		attributes: { title, ingredientList, imageWidth, imageHeight, pictureAlt, pictureURL },
 	} = props;
 
 	return (
-		<div { ...useBlockProps.save() }>
+		<div { ...useBlockProps.save() }
+		style={ {
+			backgroundColor: props.attributes.backgroundColor,
+		} }
+		>
 			<RichText.Content
 				tagName="h2"
 				value={ title }
 			/>
+			<h3>{ __( 'Ingredients', 'blocks-plugin' ) }</h3>
+				<ul>
+					{ ingredientList?.length > 0 && 
+					ingredientList.map(
+						(item) => <li> {item} </li>
+						)
+					}
+				</ul>
+				{ pictureURL &&
+				<img
+					src={ pictureURL }
+					width={ imageWidth }
+					height={ imageHeight }
+					alt={ pictureAlt }
+				/>
+				}
 		</div>
 	);
 }

@@ -15,6 +15,33 @@
 			"type": "string",
 			"source": "html",
 			"selector": "h2"
+		},
+		"ingredientList": {
+			"type": "array",
+			"default": []
+		},
+		"pictureURL": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "src"
+		},
+		"pictureAlt": {
+			"type": "string",
+			"source": "attribute",
+			"attribute": "alt",
+			"selector": "img"
+		},
+		"imageWidth": {
+			"type": "number",
+			"default": 400
+		},
+		"imageHeight": {
+			"type": "number",
+			"default": 400
+		},
+		"backgroundColor": {
+			"type": "string"
 		}
 	},
 	"textdomain": "blocks_plugin",
