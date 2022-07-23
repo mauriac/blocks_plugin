@@ -474,7 +474,7 @@ function _extends() {
   \*************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"maur-blocks/recipe","version":"0.1.0","title":"Recipe Block","category":"widgets","icon":"smiley","description":"A block to create a recipe.","supports":{"html":false},"attributes":{"title":{"type":"string","source":"html","selector":"h2"},"ingredientList":{"type":"array","default":[]},"pictureURL":{"type":"string","source":"attribute","selector":"img","attribute":"src"},"pictureAlt":{"type":"string","source":"attribute","attribute":"alt","selector":"img"},"imageWidth":{"type":"number","default":400},"imageHeight":{"type":"number","default":400},"backgroundColor":{"type":"string"}},"textdomain":"blocks_plugin","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
+module.exports = JSON.parse('{"$schema":"https://schemas.wp.org/trunk/block.json","apiVersion":2,"name":"maur-blocks/recipe","version":"0.1.0","title":"Recipe Block","category":"widgets","icon":"index-card","description":"A block to create a recipe.","supports":{"html":false},"attributes":{"title":{"type":"string","source":"html","selector":"h2"},"ingredientList":{"type":"array","default":[]},"pictureURL":{"type":"string","source":"attribute","selector":"img","attribute":"src"},"pictureAlt":{"type":"string","source":"attribute","attribute":"alt","selector":"img"},"imageWidth":{"type":"number","default":400},"imageHeight":{"type":"number","default":400},"backgroundColor":{"type":"string"}},"textdomain":"blocks_plugin","editorScript":"file:./index.js","editorStyle":"file:./index.css","style":"file:./style-index.css"}');
 
 /***/ })
 

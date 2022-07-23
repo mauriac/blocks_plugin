@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Blocks Plugin
- * Description:       Example static block scaffolded with Create Block tool.
+ * Description:       A set of useful blocks.
  * Requires at least: 5.9
  * Requires PHP:      7.0
  * Version:           0.1.0

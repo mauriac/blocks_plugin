@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "title": "Recipe Block",
   "category": "widgets",
-  "icon": "smiley",
+  "icon": "index-card",
   "description": "A block to create a recipe.",
   "supports": {
     "html": false
